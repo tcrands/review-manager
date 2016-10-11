@@ -31,8 +31,6 @@ func incomingReview(w http.ResponseWriter, r *http.Request) {
             processedAdvisorData = processNewAdvisor(advisorData, reviewData)
         }
 
-        fmt.Println(processedAdvisorData)
-
         updateDatabase(processedAdvisorData)
         fmt.Println(processOutput(processedAdvisorData))
 
