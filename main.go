@@ -8,6 +8,8 @@ import (
     "os"
 )
 
+var dbMap = "advisorMap.db"
+
 func main() {
 
     router := NewRouter()
@@ -29,4 +31,13 @@ func determineListenAddress() string {
     return ":8080"
   }
   return ":" + port
+}
+
+func stringInArray(str string, list []string) bool {
+   for _, v := range list {
+       if v == str {
+           return true
+       }
+   }
+   return false
 }

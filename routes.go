@@ -15,12 +15,6 @@ type Routes []Route
 
 var routes = Routes{
     Route{
-        "serverTest",
-        "GET",
-        "/",
-        serverTest,
-    },
-    Route{
         "incomingReview",
         "POST",
         "/review",

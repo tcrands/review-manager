@@ -6,15 +6,14 @@ type ReviewData struct {
 	Solicited string `json:"solicited"`
     Device string `json:"device"`
     Length int `json:"length"`
-	Stars int `json:"stars"`
+	Stars float64 `json:"stars"`
 }
-type ReviewDataSet []ReviewData
 
 type AdvisorData struct {
-	Name string
-	Reviews []string
-	Score int
-	Devices []string
-	Stars int
+	Name string `json:"name"`
+	Reviews []string `json:"reviews"`
+	Score float64 `json:"score"`
+	Devices []string `json:"devices"`
+	Stars float64 `json:"stars"`
+	Error string `json:"error"`
 }
-type AdvisorDataSet []AdvisorData
