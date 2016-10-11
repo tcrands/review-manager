@@ -27,11 +27,4 @@ func updateDatabase(AdvisorData *AdvisorData) {
         b, _ := tx.CreateBucketIfNotExists([]byte(advisorName))
         return b.Put([]byte(advisorName), []byte(stringedAdvisor))
     })
-
-    // db.View(func(tx *bolt.Tx) error {
-    //     b := tx.Bucket([]byte(advisorName))
-    //     advisor := b.Get([]byte(advisorName))
-    //     fmt.Printf("Value Stored: %s\n", append(advisor, (" With Key: " + advisorName)...))
-    //     return nil
-    // })
 }
